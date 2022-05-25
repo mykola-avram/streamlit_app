@@ -8,7 +8,7 @@ my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/da
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 
 # take the json version of the response and normalize it
- fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
+fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 #output it the screen as a table
 st.dataframe(fruityvice_normalized)
 
