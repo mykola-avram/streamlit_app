@@ -5,7 +5,7 @@ import requests
 my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" kiwi")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + kiwi")
 
 # take the json version of the response and normalize it
  fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
