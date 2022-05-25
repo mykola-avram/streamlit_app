@@ -36,7 +36,7 @@ fruitsSelect = st.multiselect(
 #)
 fruit_to_show = my_fruit_list.loc[fruitsSelect]
 #display the table on the page
-st.dataframe(fruitsSelect)
+st.dataframe(fruit_to_show)
 
 
 
