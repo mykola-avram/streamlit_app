@@ -33,8 +33,9 @@ nameSelect = st.multiselect(
     options=list(names['labels']), # convert to list
     default=["Yellow"]
 )
+fruit_to_show = my_fruit_list.loc[fruitsSelect];
 #display the table on the page
-st.dataframe(my_fruit_list)
+st.dataframe(fruit_to_show)
 
 
 
