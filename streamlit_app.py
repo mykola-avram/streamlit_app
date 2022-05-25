@@ -27,13 +27,14 @@ fruitsSelect = st.multiselect(
     options=list(my_fruit_list['Fruit']),
     default=["Avocado","Strawberries"])
 
-names = pd.DataFrame({'labels':["Green","Yellow","Red","Blue"]})
-nameSelect = st.multiselect(
-    "What are your favorite colors",
-    options=list(names['labels']), # convert to list
-    default=["Yellow"]
-)
-fruit_to_show = my_fruit_list.loc[fruitsSelect];
+
+#names = pd.DataFrame({'labels':["Green","Yellow","Red","Blue"]})
+#nameSelect = st.multiselect(
+#    "What are your favorite colors",
+#    options=list(names['labels']), # convert to list
+#    default=["Yellow"]
+#)
+fruit_to_show = my_fruit_list.loc[fruitsSelect]
 #display the table on the page
 st.dataframe(fruit_to_show)
 
