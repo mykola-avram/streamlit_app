@@ -3,7 +3,7 @@ import pandas as pd
 
 my_fruit_list = pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 st.dataframe(my_fruit_list)
-
+st.header("Header")
 #df = pd.DataFrame({
 #  'first column': [1, 2, 3, 4],
 #  'second column': [10, 20, 30, 40]
