@@ -1,2 +1,2 @@
-#req 
+#requirements
 snowflake-connector-python
