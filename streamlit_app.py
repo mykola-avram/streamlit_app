@@ -38,11 +38,11 @@ pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.
 my_fruit_list.set_index("Fruit")
 
 # Let's put a pick list here so they can pick the fruit they want to include
-fruitsSelect = st.multiselect(
-    "Pick some fruits:",
-    #options=list(my_fruit_list.index),
-    options=list(my_fruit_list["Fruit"]),
-    default=["Avocado","Strawberries"])
+#fruitsSelect = st.multiselect(
+#    "Pick some fruits:",
+#    #options=list(my_fruit_list.index),
+#    options=list(my_fruit_list["Fruit"]),
+#    default=["Avocado","Strawberries"])
 
 
 #names = pd.DataFrame({'labels':["Green","Yellow","Red","Blue"]})
@@ -70,3 +70,8 @@ my_data_rows = my_cur.fetchall()
 st.header("The fruit load list con")
 st.dataframe(my_data_rows)
 
+
+nameSelect = st.multiselect(
+    "What are your fruit",
+    options=list(my_data_rows[' ']), # convert to list
+    default=["apple"]
