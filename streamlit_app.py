@@ -36,6 +36,7 @@ fruitsSelect = st.multiselect(
 #)
 fruit_to_show = my_fruit_list.loc[fruitsSelect]
 #display the table on the page
+fruit_to_show.columns = fruit_to_show.columns.str.replace(' ', '')
 st.dataframe(fruit_to_show)
 
 
