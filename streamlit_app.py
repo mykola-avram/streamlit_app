@@ -51,10 +51,10 @@ my_fruit_list.set_index("Fruit")
 #    options=list(names['labels']), # convert to list
 #    default=["Yellow"]
 #)
-fruit_to_show = my_fruit_list.loc[fruitsSelect]
+#fruit_to_show = my_fruit_list.loc[fruitsSelect]
 #display the table on the page
-print('Print:', fruit_to_show)
-st.dataframe(fruitsSelect)
+#print('Print:', fruit_to_show)
+#st.dataframe(fruitsSelect)
 
 my_cnx = snowflake.connector.connect(**st.secrets["snowflake"])
 my_cur = my_cnx.cursor()
@@ -75,3 +75,4 @@ nameSelect = st.multiselect(
     "What are your fruit",
     options=list(my_data_rows[' ']), # convert to list
     default=["apple"])
+st.dataframe(nameSelect)
