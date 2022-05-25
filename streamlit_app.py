@@ -74,4 +74,4 @@ st.dataframe(my_data_rows)
 nameSelect = st.multiselect(
     "What are your fruit",
     options=list(my_data_rows[' ']), # convert to list
-    default=["apple"]
+    default=["apple"])
