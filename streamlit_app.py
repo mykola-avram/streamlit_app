@@ -23,8 +23,9 @@ my_fruit_list.set_index("Fruit")
 # Let's put a pick list here so they can pick the fruit they want to include
 fruitsSelect = st.multiselect(
     "Pick some fruits:",
-    list(my_fruit_list.index),
-    ["Avocado","Strawberries"])
+    #options=list(my_fruit_list.index),
+    options=list(my_fruit_list['Fruit']),
+    default=["Avocado","Strawberries"])
 
 names = pd.DataFrame({'labels':["Green","Yellow","Red","Blue"]})
 nameSelect = st.multiselect(
