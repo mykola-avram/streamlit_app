@@ -70,6 +70,7 @@ my_data_rows = my_cur.fetchall()
 st.header("The fruit load list con")
 st.dataframe(my_data_rows)
 
+my_data_rows.set_index("FRUIT_NAME")
 
 nameSelect = st.multiselect(
     "What are your fruit",
