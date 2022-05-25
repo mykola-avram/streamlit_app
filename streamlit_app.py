@@ -24,7 +24,7 @@ my_fruit_list.set_index("Fruit")
 fruitsSelect = st.multiselect(
     "Pick some fruits:",
     #options=list(my_fruit_list.index),
-    options=list(my_fruit_list['Avocado']),
+    options=list(my_fruit_list["Fruit"]),
     default=["Avocado","Strawberries"])
 
 
